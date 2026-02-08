@@ -1,0 +1,434 @@
+---
+title: "Mathématiques appliquées aux sciences de la vie"
+subtitle: "Remédiation de la semaine du 08/02/2026"
+lang: fr
+format: 
+ revealjs:
+      width: 1472
+      height: 920
+      theme: [default, clean.scss]
+      qrcode: 'assets/qrcode.png'
+      pdfl: '[Télécharger le PDF](assets/slides.pdf){.pdf-link target="_blank"}'
+      menu:
+        side: left
+      slide-number: true
+      transition: fade
+      revealjs-plugins:
+        - tldreveal
+      template-partials:
+        - title-slide.html
+
+---
+::: {.content-hidden}
+
+\newcommand{\dom}[1]{\text{dom}{\left(#1\right)}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\e}{\text{e}}
+\newcommand{\dx}{\text{d}x}
+\newcommand{\IQ}{\mathbb{Q}}
+\newcommand{\du}{\text{d}u}
+\newcommand{\IC}{\mathbb{C}}
+\newcommand{\i}{\textbf{i}}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\nv}[1]{\lVert\overrightarrow{#1}\rVert}
+
+
+
+:::
+
+# Équations différentielles
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+<script src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+
+<script>
+function plotfdf(expr_f, expr_df, expr_2f, bbox) {
+
+  const uid = Math.random().toString(36).slice(2);
+
+  const idF  = `graph-f-${uid}`;
+  const idFp = `graph-fp-${uid}`;
+  const cbId = `show-2f-${uid}`;
+
+  document.write(`
+    <div style="display:flex; justify-content: space-around; align-items:flex-start;">
+
+      <div style="width:45%; height:400px;">
+        <div style="text-align:center; font-weight:600; margin-bottom:4px;">
+          Graphe de y
+        </div>
+        <div id="${idF}" style="width:100%; height:360px;"></div>
+      </div>
+
+      <div style="width:45%; height:400px; position:relative;">
+        <div style="text-align:center; font-weight:600; margin-bottom:4px;">
+          Graphe de y'
+        </div>
+        <div id="${idFp}" style="width:100%; height:360px;"></div>
+        <label style="position:absolute; top:8px; right:40px; background:transparent; padding:2px 5px; border-radius:4px; font-size:0.9em;">
+          <input type="checkbox" id="${cbId}">
+        </label>
+      </div>
+
+    </div>
+  `);
+
+  setTimeout(() => {
+    const boardF = JXG.JSXGraph.initBoard(idF, { boundingbox: bbox, axis: true });
+    boardF.create('functiongraph', expr_f, { strokeWidth: 2 });
+
+    const boardFp = JXG.JSXGraph.initBoard(idFp, { boundingbox: bbox, axis: true });
+    boardFp.create('functiongraph', expr_df, { strokeWidth: 2,strokeColor:'purple', });
+
+    let twoF = null;
+    document.getElementById(cbId).addEventListener('change', function () {
+      if (twoF) {
+        boardFp.removeObject(twoF);
+        twoF = null;
+      }
+      if (this.checked) {
+        twoF = boardFp.create('functiongraph', expr_2f, {
+          strokeWidth: 4,
+          strokeColor:'green',
+          dash: 2
+        });
+      }
+    });
+  }, 0);
+}
+</script>
+
+
+## Définition
+
+:::{#def-ed}
+Une équation différentielle est une équation
+
+1. dont l'inconnue est une **fonction** $y: A\subset \IR\to \IR:t\mapsto y(t)$,
+
+2. qui contient la fonction $y$ et certaines de ses **dérivées** $y'$, $y''$, etc.
+:::
+
+:::{#rem-ed}
+Dans la construction d'une équation différentielle, on peut utiliser les opérations suivantes:
+
+1. $+,-,\cdot,/$
+2. les fonctions de référence ($\sin$, $\cos$,$\ln$, $x^2$,...) et la composition de fonction.
+:::
+
+## Exemples et contre-exemples
+
+Dans les expressions suivantes, $y$ est une fonction et $t$ une variable.
+$$
+y'=y
+$$
+
+$$
+2y''=3\sin(y)+t^2
+$$
+
+$$
+3y''-5y'+y=0
+$$
+
+$$
+y\cdot (\sin(t)+1)
+$$
+
+$$
+t^2+t-1>\e^t
+$$
+
+
+## Terminologie
+
+1. L'**ordre** d'une ED est l'odre de la plus grande dérivée de $y$ apparaîssant dans l'équation.
+
+2. Une **ED ordinaire (EDO)** est une équation différentielle où la variable ne dépend que d'une seule variable.
+
+## Exercice
+
+:::{#exr-ed1}
+Identifie l'ordre des ED suivantes:
+
+1. $y'+y=y'''-5t$
+2. $\sin(y)+(y'')^2=0$
+3. $y''+y'-y=y''$
+
+:::
+
+# Solutions d'une équation différentielle
+
+## Définition
+
+:::{#def-sol}
+Une solution d'une EDO est une **fonction** $y(t)$ qui satisfait cette équation pour tout $t$.
+:::
+
+## Exemples
+
+Soit l'EDO $y'-y=0$, qui équivaut à $y'=y$. 
+
+1. $y(t)=\e^t$ est une solution
+
+<script>
+plotfdf(
+  x => Math.exp(x),
+  x => Math.exp(x),
+  x => Math.exp(x),
+  [-3,10,3,-1]
+);
+</script>
+
+## Exemples
+
+Soit l'EDO $y'-y=0$, qui équivaut à $y'=y$. 
+
+2. $y(t)=10\e^t$ est une solution
+
+<script>
+plotfdf(
+  x => 10*Math.exp(x),
+  x => 10*Math.exp(x),
+  x => 10*Math.exp(x),
+  [-3,100,3,-1]
+);
+</script>
+
+## Exemples
+
+Soit l'EDO $y'-y=0$, qui équivaut à $y'=y$. 
+
+3. $y(t)=2^t$ **n'est pas** une solution
+
+<script>
+plotfdf(
+  x => Math.pow(2,x),
+  x => Math.log(2)*Math.pow(2,x),
+  x => Math.pow(2,x),
+  [-3,10,3,-1]
+);
+</script>
+
+## Exemples
+
+Soit l'EDO $y'-y=0$, qui équivaut à $y'=y$. 
+
+4. $y(t)=\sin(t)$ **n'est pas** une solution
+
+<script>
+plotfdf(
+  x => Math.sin(x),
+  x => Math.cos(x),
+  x => Math.sin(x),
+  [-10,1.5,10,-1.5]
+);
+</script>
+
+## Exercices
+
+:::{#exr-sol1}
+Détermine si les fonctions suivantes sont des solutions de l'équation $y''+y=0$.
+
+1. $3\sin(x)$
+
+2. $\sin(3x)$
+
+3. $\e^x$
+
+3. $\tan(x)$
+
+4. $3\cos(x)$
+:::
+
+## Exercices
+
+
+:::{#exr-sol2}
+Détermine si les fonctions suivantes sont des solutions de l'équation $y'=\dfrac{y}{2}+1$.
+
+1. 
+
+<script>
+plotfdf(
+  x => Math.exp(x),
+  x => Math.exp(x),
+  x => Math.exp(x)/2+1,
+  [-10,10,10,-1]
+);
+</script>
+
+:::
+
+## Exercices
+
+
+:::{#exr-sol2}
+Détermine si les fonctions suivantes sont des solutions de l'équation $y'=\dfrac{y}{2}+1$.
+
+2. 
+
+<script>
+plotfdf(
+  x => -2+Math.exp(x/2),
+  x => Math.exp(x/2)/2,
+  x => (-2+Math.exp(x/2))/2+1,
+  [-10,10,10,-10]
+);
+</script>
+
+:::
+
+## Exercices
+
+
+:::{#exr-sol2}
+Détermine si les fonctions suivantes sont des solutions de l'équation $y'=\dfrac{y}{2}+1$.
+
+3. 
+
+<script>
+plotfdf(
+  x => -2-2*Math.exp(x/2),
+  x => -Math.exp(x/2),
+  x => (-2-2*Math.exp(x/2))/2+1,
+  [-10,1,10,-10]
+);
+</script>
+
+:::
+
+## Exercices
+
+
+:::{#exr-sol2}
+Détermine si les fonctions suivantes sont des solutions de l'équation $y'=\dfrac{y}{2}+1$.
+
+4. 
+
+<script>
+plotfdf(
+  x => Math.pow(x,2),
+  x => 2*x,
+  x => Math.pow(x,2)/2+1,
+  [-10,10,10,-1]
+);
+</script>
+
+:::
+
+# Équations différentielles: séparation des variables
+
+## Définition
+
+:::{#def-sep}
+Une EDO **séparable** est une équation de la forme 
+$$
+y'=f(t)g(y(t)),
+$$
+où $f$ est $g$ sont deux fonctions **intégrables**.
+:::
+
+## Exemples et contres-exemples
+
+$$
+y'=y(y+2ty)
+$$
+
+$$
+y'-yt=2y
+$$
+
+$$
+y''+y'=t
+$$
+
+$$
+y'=y+t
+$$
+
+
+## Exercices
+
+:::{#exr-sep1}
+Écris les équations suivantes sous la forme $y'=f(t)g(y)$.
+
+1. $ty'+y=yt$
+
+2. $y'\sin(y)=t-yt$
+
+:::
+
+## Exercices
+
+:::{#exr-sep2}
+Dans les équations séparables suivantes, identifie qui est $f(t)$ et qui est $g(y)$.
+
+1. $y'=yt$
+
+2. $y'=\sin(y)t^2$
+
+3. $y'=\sin(t)y^2$
+
+4. $y'=\sqrt{t}\cos(t)$
+
+5. $y'=y+\sin(t)y$
+
+6. $yy'+y=\e^tt$
+:::
+
+## Exemple
+
+On veut résoudre l'équation $y'=\e^{y}\cdot t$. Ici: $f(t)=t$ et $g(y)=\e^{y}$. 
+
+**Étape 1:** on réécrit l'équation: $\dfrac{\text{d}y}{\text{d}t}=\e^{y}\cdot t$.
+
+**Étape 2:** on sépare les variables: les $y$ d'un côté et les $t$ de l'audre:
+
+$$
+\dfrac{\text{d}y}{\e^{y}}=t\text{d}t.
+$$
+
+## Exemple
+
+On veut résoudre l'équation $y'=\e^{y}\cdot t$.
+
+**Étape 3:** on intègre chacun des membres:
+
+$$
+\int\dfrac{\text{d}y}{\e^{y}}=\int t\text{d}t.
+$$
+
+**Étape 4:** on on calcule les intégrales:
+
+$$
+\int\dfrac{\text{d}y}{\e^{y}}=\int\e^{-y}\text{d}y=-\int-\e^{-y}\text{d}y=-\e^{-y}+k_1, k_1\in\IR
+$$
+
+$$
+\int t\text{d}t=\dfrac{t^2}{2}+k_2, k_2\in\IR
+$$
+
+## Exemple
+
+On veut résoudre l'équation $y'=\e^{y}\cdot t$.
+
+**Étape 5:** on isole $y$ dans $-\e^{-y}+k_1=\dfrac{t^2}{2}+k_2$. Si on pose $k=k_1-k_2$:
+
+$$
+y=-\ln(k-\dfrac{t^2}{2})
+$$
+
+**Conclusion:** l'ensemble des solutions de l'équation est $\left\{-\ln(k-\dfrac{t^2}{2})\left|\right.k\in\IR\right\}$
+
+## Prérequis
+
+Quels sont les prérequis pour résoudre une équations séparable?
+
+1. Maîtriser l'algèbre de base (PEMDAS, distributivité, mise en évidence, produits remarquables, etc.)
+2. Savoir manipuler les équations en appliquant les principes d'équivalence.
+3. Savoir résoudre les équations du second degré, exponentielles et trigonométriques du Q1.
+1. Savoir dériver.
+2. Savoir intégrer.
