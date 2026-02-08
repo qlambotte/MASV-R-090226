@@ -1,5 +1,5 @@
 ---
-title: "Mathématiques appliquées aux sciences de la vie"
+title: "Mathématique appliquée aux sciences de la vie"
 subtitle: "Remédiation de la semaine du 08/02/2026"
 lang: fr
 format: 
