@@ -2,154 +2,154 @@
   {
     "objectID": "slides.html#définition",
     "href": "slides.html#définition",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Définition",
     "text": "Définition\n\nDéfinition 1 Une équation différentielle est une équation\n\ndont l’inconnue est une fonction \\(y: A\\subset \\mathbb{R}\\to \\mathbb{R}:t\\mapsto y(t)\\),\nqui contient la fonction \\(y\\) et certaines de ses dérivées \\(y'\\), \\(y''\\), etc.\n\n\n\nRemarque 1. Dans la construction d’une équation différentielle, on peut utiliser les opérations suivantes:\n\n\\(+,-,\\cdot,/\\)\nles fonctions de référence (\\(\\sin\\), \\(\\cos\\),\\(\\ln\\), \\(x^2\\),…) et la composition de fonction."
   },
   {
     "objectID": "slides.html#exemples-et-contre-exemples",
     "href": "slides.html#exemples-et-contre-exemples",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemples et contre-exemples",
     "text": "Exemples et contre-exemples\nDans les expressions suivantes, \\(y\\) est une fonction et \\(t\\) une variable. \\[\ny'=y\n\\]\n\\[\n2y''=3\\sin(y)+t^2\n\\]\n\\[\n3y''-5y'+y=0\n\\]\n\\[\ny\\cdot (\\sin(t)+1)\n\\]\n\\[\nt^2+t-1&gt;\\text{e}^t\n\\]"
   },
   {
     "objectID": "slides.html#terminologie",
     "href": "slides.html#terminologie",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Terminologie",
     "text": "Terminologie\n\nL’ordre d’une ED est l’odre de la plus grande dérivée de \\(y\\) apparaîssant dans l’équation.\nUne ED ordinaire (EDO) est une équation différentielle où la variable ne dépend que d’une seule variable."
   },
   {
     "objectID": "slides.html#exercice",
     "href": "slides.html#exercice",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exercice",
     "text": "Exercice\n\nExercice 1 Identifie l’ordre des ED suivantes:\n\n\\(y'+y=y'''-5t\\)\n\\(\\sin(y)+(y'')^2=0\\)\n\\(y''+y'-y=y''\\)"
   },
   {
     "objectID": "slides.html#définition-1",
     "href": "slides.html#définition-1",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Définition",
     "text": "Définition\n\nDéfinition 2 Une solution d’une EDO est une fonction \\(y(t)\\) qui satisfait cette équation pour tout \\(t\\)."
   },
   {
     "objectID": "slides.html#exemples",
     "href": "slides.html#exemples",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemples",
     "text": "Exemples\nSoit l’EDO \\(y'-y=0\\), qui équivaut à \\(y'=y\\).\n\n\\(y(t)=\\text{e}^t\\) est une solution"
   },
   {
     "objectID": "slides.html#exemples-1",
     "href": "slides.html#exemples-1",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemples",
     "text": "Exemples\nSoit l’EDO \\(y'-y=0\\), qui équivaut à \\(y'=y\\).\n\n\\(y(t)=10\\text{e}^t\\) est une solution"
   },
   {
     "objectID": "slides.html#exemples-2",
     "href": "slides.html#exemples-2",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemples",
     "text": "Exemples\nSoit l’EDO \\(y'-y=0\\), qui équivaut à \\(y'=y\\).\n\n\\(y(t)=2^t\\) n’est pas une solution"
   },
   {
     "objectID": "slides.html#exemples-3",
     "href": "slides.html#exemples-3",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemples",
     "text": "Exemples\nSoit l’EDO \\(y'-y=0\\), qui équivaut à \\(y'=y\\).\n\n\\(y(t)=\\sin(t)\\) n’est pas une solution"
   },
   {
     "objectID": "slides.html#exercices",
     "href": "slides.html#exercices",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exercices",
     "text": "Exercices\n\nExercice 2 Détermine si les fonctions suivantes sont des solutions de l’équation \\(y''+y=0\\).\n\n\\(3\\sin(x)\\)\n\\(\\sin(3x)\\)\n\\(\\text{e}^x\\)\n\\(\\tan(x)\\)\n\\(3\\cos(x)\\)"
   },
   {
     "objectID": "slides.html#exercices-1",
     "href": "slides.html#exercices-1",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exercices",
     "text": "Exercices\n\nExercice 3 Détermine si les fonctions suivantes sont des solutions de l’équation \\(y'=\\dfrac{y}{2}+1\\)."
   },
   {
     "objectID": "slides.html#exercices-2",
     "href": "slides.html#exercices-2",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exercices",
     "text": "Exercices\n\nExercice 4 Détermine si les fonctions suivantes sont des solutions de l’équation \\(y'=\\dfrac{y}{2}+1\\)."
   },
   {
     "objectID": "slides.html#exercices-3",
     "href": "slides.html#exercices-3",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exercices",
     "text": "Exercices\n\nExercice 5 Détermine si les fonctions suivantes sont des solutions de l’équation \\(y'=\\dfrac{y}{2}+1\\)."
   },
   {
     "objectID": "slides.html#exercices-4",
     "href": "slides.html#exercices-4",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exercices",
     "text": "Exercices\n\nExercice 6 Détermine si les fonctions suivantes sont des solutions de l’équation \\(y'=\\dfrac{y}{2}+1\\)."
   },
   {
     "objectID": "slides.html#définition-2",
     "href": "slides.html#définition-2",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Définition",
     "text": "Définition\n\nDéfinition 3 Une EDO séparable est une équation de la forme \\[\ny'=f(t)g(y(t)),\n\\] où \\(f\\) est \\(g\\) sont deux fonctions intégrables."
   },
   {
     "objectID": "slides.html#exemples-et-contres-exemples",
     "href": "slides.html#exemples-et-contres-exemples",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemples et contres-exemples",
     "text": "Exemples et contres-exemples\n\\[\ny'=y(y+2ty)\n\\]\n\\[\ny'-yt=2y\n\\]\n\\[\ny''+y'=t\n\\]\n\\[\ny'=y+t\n\\]"
   },
   {
     "objectID": "slides.html#exercices-5",
     "href": "slides.html#exercices-5",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exercices",
     "text": "Exercices\n\nExercice 7 Écris les équations suivantes sous la forme \\(y'=f(t)g(y)\\).\n\n\\(ty'+y=yt\\)\n\\(y'\\sin(y)=t-yt\\)"
   },
   {
     "objectID": "slides.html#exercices-6",
     "href": "slides.html#exercices-6",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exercices",
     "text": "Exercices\n\nExercice 8 Dans les équations séparables suivantes, identifie qui est \\(f(t)\\) et qui est \\(g(y)\\).\n\n\\(y'=yt\\)\n\\(y'=\\sin(y)t^2\\)\n\\(y'=\\sin(t)y^2\\)\n\\(y'=\\sqrt{t}\\cos(t)\\)\n\\(y'=y+\\sin(t)y\\)\n\\(yy'+y=\\text{e}^tt\\)"
   },
   {
     "objectID": "slides.html#exemple",
     "href": "slides.html#exemple",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemple",
     "text": "Exemple\nOn veut résoudre l’équation \\(y'=\\text{e}^{y}\\cdot t\\). Ici: \\(f(t)=t\\) et \\(g(y)=\\text{e}^{y}\\).\nÉtape 1: on réécrit l’équation: \\(\\dfrac{\\text{d}y}{\\text{d}t}=\\text{e}^{y}\\cdot t\\).\nÉtape 2: on sépare les variables: les \\(y\\) d’un côté et les \\(t\\) de l’audre:\n\\[\n\\dfrac{\\text{d}y}{\\text{e}^{y}}=t\\text{d}t.\n\\]"
   },
   {
     "objectID": "slides.html#exemple-1",
     "href": "slides.html#exemple-1",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemple",
     "text": "Exemple\nOn veut résoudre l’équation \\(y'=\\text{e}^{y}\\cdot t\\).\nÉtape 3: on intègre chacun des membres:\n\\[\n\\int\\dfrac{\\text{d}y}{\\text{e}^{y}}=\\int t\\text{d}t.\n\\]\nÉtape 4: on on calcule les intégrales:\n\\[\n\\int\\dfrac{\\text{d}y}{\\text{e}^{y}}=\\int\\text{e}^{-y}\\text{d}y=-\\int-\\text{e}^{-y}\\text{d}y=-\\text{e}^{-y}+k_1, k_1\\in\\mathbb{R}\n\\]\n\\[\n\\int t\\text{d}t=\\dfrac{t^2}{2}+k_2, k_2\\in\\mathbb{R}\n\\]"
   },
   {
     "objectID": "slides.html#exemple-2",
     "href": "slides.html#exemple-2",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Exemple",
     "text": "Exemple\nOn veut résoudre l’équation \\(y'=\\text{e}^{y}\\cdot t\\).\nÉtape 5: on isole \\(y\\) dans \\(-\\text{e}^{-y}+k_1=\\dfrac{t^2}{2}+k_2\\). Si on pose \\(k=k_1-k_2\\):\n\\[\ny=-\\ln(k-\\dfrac{t^2}{2})\n\\]\nConclusion: l’ensemble des solutions de l’équation est \\(\\left\\{-\\ln(k-\\dfrac{t^2}{2})\\left|\\right.k\\in\\mathbb{R}\\right\\}\\)"
   },
   {
     "objectID": "slides.html#prérequis",
     "href": "slides.html#prérequis",
-    "title": "Mathématiques appliquées aux sciences de la vie",
+    "title": "Mathématique appliquée aux sciences de la vie",
     "section": "Prérequis",
     "text": "Prérequis\nQuels sont les prérequis pour résoudre une équations séparable?\n\nMaîtriser l’algèbre de base (PEMDAS, distributivité, mise en évidence, produits remarquables, etc.)\nSavoir manipuler les équations en appliquant les principes d’équivalence.\nSavoir résoudre les équations du second degré, exponentielles et trigonométriques du Q1.\nSavoir dériver.\nSavoir intégrer."
   }
