@@ -425,7 +425,7 @@ $$
 
 ## Prérequis
 
-Quels sont les prérequis pour résoudre une équations séparable?
+Quels sont les prérequis pour résoudre une EDO?
 
 1. Maîtriser l'algèbre de base (PEMDAS, distributivité, mise en évidence, produits remarquables, etc.)
 2. Savoir manipuler les équations en appliquant les principes d'équivalence.
